@@ -1,0 +1,92 @@
+<!--
+  Generated template for the CadastrarPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="amaveis">
+    <ion-title>Cadastrar Vaga</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-fab left bottom>
+    <button ion-fab color="dark"><ion-icon name="md-volume-up"></ion-icon></button>
+    <ion-fab-list side="top">
+      <button ion-fab color="amaveis"><ion-icon name="md-megaphone"></ion-icon></button>
+      <button ion-fab color="amaveis"><ion-icon name="md-mic"></ion-icon></button>
+    </ion-fab-list>
+  </ion-fab>
+
+  <ion-list>
+    <ion-grid>
+      <ion-row>
+        <ion-item>
+          <ion-label floating>Nome da Escola *</ion-label>
+          <ion-input type="text" value=""></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>Endereço da Escola *</ion-label>
+          <ion-input type="text" value=""></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label floating>Quantidade de Vagas *</ion-label>
+          <ion-input type="number" value=""></ion-input>
+        </ion-item>
+
+        <ion-item col-6>
+          <ion-label>Turno</ion-label>
+          <ion-select [(ngModel)]="music" [selectOptions]="turnoAlertOpts">
+            <ion-option (select)="stpSelect()">Manhã</ion-option>
+            <ion-option>Tarde</ion-option>
+            <ion-option>Noite</ion-option>
+          </ion-select>
+        </ion-item>
+
+        <ion-item col-6>
+          <ion-label>Serie</ion-label>
+          <ion-select [(ngModel)]="serie" [selectOptions]="serieAlertOpts">
+            <ion-option (select)="stpSelect()">1º Ano</ion-option>
+            <ion-option>2º Ano</ion-option>
+            <ion-option>3º Ano</ion-option>
+            <ion-option>4º Ano</ion-option>
+            <ion-option>5º Ano</ion-option>
+            <ion-option>6º Ano</ion-option>
+            <ion-option>7º Ano</ion-option>
+            <ion-option>8º Ano</ion-option>
+            <ion-option>9º Ano</ion-option>
+            <ion-option>1º Ano/Ensino Médio</ion-option>
+            <ion-option>2º Ano/Ensino Médio</ion-option>
+            <ion-option>3º Ano/Ensino Médio</ion-option>
+          </ion-select>
+        </ion-item>
+
+        <ion-item>
+          <ion-label floating>Descrição da Vaga</ion-label>
+          <ion-input type="text" value=""></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Data do Vencimento *</ion-label>
+          <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="event.timeEnds"></ion-datetime>
+        </ion-item>
+
+        <ion-item>
+          <ion-label floating>Tipo de Deficiência *</ion-label>
+          <ion-input type="text" value=""></ion-input>
+        </ion-item>
+      </ion-row>
+    </ion-grid>
+
+
+  </ion-list>
+
+  <div padding>
+    <button ion-button color="primary" block>Cadastrar Vaga</button>
+  </div>
+</ion-content>

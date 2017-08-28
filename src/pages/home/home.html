@@ -1,0 +1,72 @@
+<ion-header>
+  <ion-navbar color="amaveis">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Amaveis</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-fab bottom top right edge>
+    <button ion-fab color="sucesso" mini><ion-icon name="add"></ion-icon></button>
+    <ion-fab-list side="left">
+      <button ion-fab color="create" (click)="openCadastrar()"><ion-icon name="md-create"></ion-icon></button>
+      <button ion-fab color="danger" (click)="openExcluir()"><ion-icon name="md-trash"></ion-icon></button>
+    </ion-fab-list>
+  </ion-fab>
+  <ion-fab left bottom>
+    <button ion-fab color="dark"><ion-icon name="md-volume-up"></ion-icon></button>
+    <ion-fab-list side="top">
+      <button ion-fab color="amaveis"><ion-icon name="md-megaphone"></ion-icon></button>
+      <button ion-fab color="amaveis"><ion-icon name="md-mic"></ion-icon></button>
+    </ion-fab-list>
+  </ion-fab>
+
+  <ion-card color="dark">
+    <ion-card-header>
+      VAGA 5º ANO
+    </ion-card-header>
+    <ion-card-content>
+      <button ion-button color="primary" block (click)="openVaga()"> Mais informações</button>
+    </ion-card-content>
+    <div>
+      <ion-item color="dark">
+        <ion-label>Desabilitar</ion-label>
+        <ion-toggle color="danger"></ion-toggle>
+      </ion-item>
+    </div>
+  </ion-card>
+  
+  <!--Card 2-->
+
+  <ion-card color="dark">
+    <ion-card-header>
+      VAGA 9º ANO
+    </ion-card-header>
+    <ion-card-content>
+      <button ion-button color="primary" block> Mais informações</button>
+    </ion-card-content>
+    <div>
+      <ion-item color="dark">
+        <ion-label>Desabilitar</ion-label>
+        <ion-toggle color="danger"></ion-toggle>
+      </ion-item>
+    </div>
+  </ion-card>
+
+  <ion-card color="disable">
+    <ion-card-header>
+      VAGA 3º ANO
+    </ion-card-header>
+    <ion-card-content>
+      <button ion-button color="light" block> Mais informações</button>
+    </ion-card-content>
+    <div>
+      <ion-item color="disable">
+        <ion-label>Desabilitar</ion-label>
+        <ion-toggle color="danger" checked="true"></ion-toggle>
+      </ion-item>
+    </div>
+  </ion-card>
+</ion-content>

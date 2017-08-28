@@ -1,0 +1,40 @@
+<ion-menu [content]="content">
+  <ion-header>
+    <ion-toolbar color="amaveis">
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <!--<ion-content>
+    <ion-list>
+      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
+        {{p.title}}
+      </button>
+    </ion-list>
+  </ion-content>-->
+  <ion-content>
+    <ion-list>
+      <button menuClose ion-item icon-left (click)="nav.setRoot(pages2.homePage)">
+        <ion-icon name="md-home"></ion-icon> Home
+      </button>
+      <button menuClose ion-item icon-left (click)="nav.setRoot(pages2.userPage)">
+        <ion-icon name="md-person"></ion-icon> Perfil
+      </button>
+      <button menuClose ion-item icon-left (click)="nav.setRoot(pages2.buscaPage)">
+        <ion-icon name="md-search"></ion-icon> Buscar Vaga
+      </button>
+      <button menuClose ion-item icon-left (click)="nav.setRoot(pages2.loginPage)">
+        <ion-icon name="ios-megaphone"></ion-icon> Feedback
+      </button>
+       <button menuClose ion-item icon-left (click)="nav.setRoot(pages2.loginPage)" color="danger">
+        <ion-icon name="md-exit"></ion-icon> Sair
+      </button>
+      
+      
+    </ion-list>
+  </ion-content>
+
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

@@ -1,8 +1,8 @@
 {
   "name": "amaveis_app",
   "app_id": "",
-  "type": "ionic1",
-  "watchPatterns": [
-    "scss/**/*"
-  ]
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
 }
